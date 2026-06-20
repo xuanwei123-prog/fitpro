@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitpro.controller.ProfileChangingController">
+   <children>
+      <AnchorPane layoutX="123.0" layoutY="62.0" prefHeight="332.0" prefWidth="366.0" style="-fx-background-color: D9D9D9; -fx-background-radius: 15;">
+         <children>
+            <Circle fill="WHITE" layoutX="181.0" layoutY="44.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="154.0" layoutY="36.0" text="Profile PIC" />
+            <Label layoutX="14.0" layoutY="14.0" text="EDIT PROFILE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="94.0" text="Username：" />
+            <Label layoutX="205.0" layoutY="92.0" text="Gender：" />
+            <Label layoutX="34.0" layoutY="123.0" text="Birthday：" />
+            <Label layoutX="209.0" layoutY="121.0" text="E-mail：" />
+            <Label layoutX="23.0" layoutY="153.0" text="Height(cm)：" />
+            <Label layoutX="190.0" layoutY="148.0" prefHeight="18.0" prefWidth="68.0" text="Weight(kg):" />
+            <Label layoutX="21.0" layoutY="179.0" text="Body Fat percentage(%):" />
+            <Label layoutX="45.0" layoutY="212.0" text="Daily Activity Level :" />
+            <Slider fx:id="activityLevelSlider" layoutX="189.0" layoutY="213.0" prefHeight="14.0" prefWidth="120.0" />
+            <Label layoutX="41.0" layoutY="236.0" text="Digestive Efficiency :" />
+            <Label layoutX="311.0" layoutY="211.0" text="High" />
+            <Label layoutX="159.0" layoutY="211.0" text="Low" />
+            <Slider fx:id="digestiveEfficiencySlider" layoutX="190.0" layoutY="239.0" prefHeight="14.0" prefWidth="120.0" />
+            <Label layoutX="309.0" layoutY="236.0" text="High" />
+            <Label layoutX="156.0" layoutY="237.0" text="Low" />
+            <Button fx:id="changeProfilePicButton" layoutX="227.0" layoutY="30.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Change profile PIC">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="birthdayPicker" layoutX="89.0" layoutY="120.0" prefHeight="11.0" prefWidth="96.0" />
+            <SplitMenuButton fx:id="genderDropdown" layoutX="256.0" layoutY="90.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="68.0" text="Gender">
+              <items>
+                <MenuItem fx:id="maleOption" mnemonicParsing="false" text="Male" />
+                <MenuItem fx:id="femaleOption" mnemonicParsing="false" text="Female" />
+              </items>
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </SplitMenuButton>
+            <Button fx:id="saveButton" layoutX="261.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#saveChanges" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 15;" text="SAVE CHANGE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="backButton" layoutX="8.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#backToProfile" prefHeight="26.0" prefWidth="96.0" style="-fx-background-radius: 15;" text="BACK">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="87.0" layoutY="255.0" text="Your BMR：" />
+            <Label layoutX="86.0" layoutY="276.0" text="Your TDEE：" />
+            <Label fx:id="bmrLabel" layoutX="159.0" layoutY="255.0" text="kcal" />
+            <Label fx:id="tdeeLabel" layoutX="159.0" layoutY="276.0" text="kcal" />
+            <TextField fx:id="usernameField" layoutX="91.0" layoutY="88.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="emailField" layoutX="257.0" layoutY="117.0" prefHeight="26.0" prefWidth="96.0" />
+            <TextField fx:id="heightField" layoutX="95.0" layoutY="149.0" prefHeight="26.0" prefWidth="84.0" />
+            <TextField fx:id="weightField" layoutX="259.0" layoutY="145.0" prefHeight="26.0" prefWidth="84.0" />
+            <TextField fx:id="bodyFatField" layoutX="163.0" layoutY="177.0" prefHeight="26.0" prefWidth="41.0" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER_RIGHT" layoutX="226.0" layoutY="-2.0" prefHeight="51.0" prefWidth="374.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Label fx:id="goalLabel" onMouseClicked="#navigateToGoal" text="Goal">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="eLoggingLabel" onMouseClicked="#navigateToLog" text="E-logging">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="nutritionLabel" onMouseClicked="#navigateToNutrition" text="Nutrition">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="progressLabel" onMouseClicked="#navigateToProgress" text="Progress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="devicesLabel" onMouseClicked="#navigateToDevices" text="Devices">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImageView" fitHeight="49.0" fitWidth="68.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="3.0" layoutY="-2.0" prefHeight="51.0" prefWidth="223.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="44.0" fitWidth="53.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="     " />
+            <Label alignment="BOTTOM_LEFT" prefHeight="18.0" prefWidth="116.0" text="Fit Pro" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

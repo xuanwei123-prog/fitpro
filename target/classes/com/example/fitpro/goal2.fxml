@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitpro.controller.Goal2Controller">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="226.0" prefHeight="51.0" prefWidth="374.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Label fx:id="goalLabel" onMouseClicked="#navigateToGoal" text="Goal">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="eLoggingLabel" onMouseClicked="#navigateToLog" text="E-logging">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="nutritionLabel" onMouseClicked="#navigateToNutrition" text="Nutrition">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="progressLabel" onMouseClicked="#navigateToProgress" text="Progress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="devicesLabel" onMouseClicked="#navigateToDevices" text="Devices">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImageView" fitHeight="46.0" fitWidth="63.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.jpeg" />
+               </image>
+            </ImageView>
+<!--            <ImageView fx:id="profileImageView" fitHeight="49.0" fitWidth="68.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@images/profile.jpeg" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+         </children>
+      </HBox>
+      <Label layoutY="2.0" text="   " />
+      <Label layoutY="2.0" text="   " />
+      <Label layoutY="2.0" text="   " />
+      <Label layoutY="2.0" text="   " />
+      <HBox alignment="CENTER_LEFT" prefHeight="51.0" prefWidth="236.0" style="-fx-background-color: D9D9D9;">
+         <children>
+<!--            <ImageView fx:id="logoImageView" fitHeight="44.0" fitWidth="43.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@images/logo.jpeg" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+            <Label text="     " />
+            <ImageView fx:id="logoImageView" fitHeight="48.0" fitWidth="43.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_LEFT" prefHeight="18.0" prefWidth="116.0" text="Fit Pro" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="10.0" layoutY="91.0" prefHeight="298.0" prefWidth="582.0" style="-fx-background-color: BEBDBD; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="187.0" layoutY="-1.0" text="Set your fitness goals!">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="39.0" text="Goals Type:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <SplitMenuButton fx:id="goalTypeSplitMenuButton" layoutX="120.0" layoutY="39.0" mnemonicParsing="false" text="TYPE">
+              <items>
+                <MenuItem fx:id="LoseWeight" mnemonicParsing="false" onAction="#setGoalTypeLoseWeight" text="Lose Weight" />
+                <MenuItem fx:id="GainMuscle" mnemonicParsing="false" onAction="#setGoalTypeGainMuscle" text="Gain Muscle" />
+                  <MenuItem fx:id="MaintainWeight" mnemonicParsing="false" onAction="#setGoalTypeMaintainWeight" text="Maintain Weight" />
+              </items>
+            </SplitMenuButton>
+            <Label layoutX="225.0" layoutY="40.0" text="Target Weight(KG) : ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="75.0" text="Target Body Fat Percentage(%) :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="75.0" text="Weekly Exercise Frequency :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="108.0" prefHeight="26.0" prefWidth="559.0" text="——————————————————————————————————">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="136.0" text="Custom Goals :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="419.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#resetFields" text="RESET">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveButton" layoutX="199.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#saveGoals" text="SAVE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="targetWeightField" layoutX="382.0" layoutY="38.0" prefHeight="26.0" prefWidth="74.0" />
+            <TextField fx:id="targetBodyFatField" layoutX="238.0" layoutY="74.0" prefHeight="26.0" prefWidth="74.0" />
+            <TextField fx:id="exerciseFrequencyField" layoutX="535.0" layoutY="74.0" prefHeight="26.0" prefWidth="51.0" />
+            <TextArea fx:id="customGoalsTextArea" layoutX="136.0" layoutY="134.0" prefHeight="104.0" prefWidth="406.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="239.0" layoutY="60.0" text="Fitness Goals">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

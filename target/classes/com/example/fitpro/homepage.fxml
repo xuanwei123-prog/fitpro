@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="652.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitpro.controller.HomepageController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="224.0" prefHeight="51.0" prefWidth="428.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Label fx:id="goalLabel" onMouseClicked="#navigateToGoal" prefHeight="20.0" prefWidth="73.0" text="Goal">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label fx:id="eLoggingLabel" onMouseClicked="#navigateToLog" prefHeight="20.0" prefWidth="110.0" text="E-logging">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label fx:id="nutritionLabel" onMouseClicked="#navigateToNutrition" prefHeight="20.0" prefWidth="109.0" text="Nutrition">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label fx:id="progressLabel" onMouseClicked="#navigateToProgress" prefHeight="20.0" prefWidth="102.0" text="Progress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label />
+            <Label fx:id="devicesLabel" onMouseClicked="#navigateToDevices" prefHeight="20.0" prefWidth="77.0" text="Devices">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImageView" fitHeight="50.0" fitWidth="54.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" prefHeight="51.0" prefWidth="223.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="57.0" fitWidth="44.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label />
+            <Label alignment="BOTTOM_LEFT" prefHeight="23.0" prefWidth="77.0" text="Fit Pro" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="51.0" prefHeight="129.0" prefWidth="652.0">
+         <children>
+            <ImageView fitHeight="97.0" fitWidth="101.0" layoutX="267.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label layoutX="280.0" layoutY="91.0" text="Fit Pro">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="118.0" text="Fit for Life,Fit with Pro. ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="67.0" layoutY="200.0" />
+      <Label layoutX="159.0" layoutY="372.0" />
+      <Label layoutX="295.0" layoutY="372.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="90.0" layoutY="341.0" prefHeight="44.0" prefWidth="472.0">
+         <children>
+            <Label layoutX="32.0" layoutY="21.0" prefHeight="23.0" prefWidth="461.0" text="Drink at least 2 liters of water every day to stay hydrated.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="45.0" layoutY="378.0" prefHeight="112.0" prefWidth="567.0">
+         <children>
+            <Label layoutX="1.0" layoutY="25.0" text="_________________________________________________________________________________________________________" />
+            <Label layoutX="119.0" layoutY="49.0" text="Have questions or feedback? Reach out to us!">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="75.0" />
+            <Label layoutX="151.0" layoutY="75.0" prefHeight="23.0" prefWidth="316.0" text="Custom Support: support@fitpro.com">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="232.0" layoutX="48.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/fitnessWoman.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="138.0" fitWidth="250.0" layoutX="360.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/fitnessWoman.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

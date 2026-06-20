@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitpro.controller.ProgressController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="224.0" prefHeight="51.0" prefWidth="374.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Label fx:id="goalLabel" onMouseClicked="#navigateToGoal" text="Goal">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="eLoggingLabel" onMouseClicked="#navigateToLog" text="E-logging">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="nutritionLabel" onMouseClicked="#navigateToNutrition" text="Nutrition">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="progressLabel" onMouseClicked="#navigateToProgress" text="Progress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="devicesLabel" onMouseClicked="#navigateToDevices" text="Devices">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImageView" fitHeight="49.0" fitWidth="68.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" prefHeight="51.0" prefWidth="223.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="44.0" fitWidth="53.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="     " />
+            <Label alignment="BOTTOM_LEFT" prefHeight="18.0" prefWidth="116.0" text="Fit Pro" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="190.0" layoutY="61.0" text="Progress Visualization" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <BarChart fx:id="exerciseSummaryChart" layoutX="33.0" layoutY="113.0" prefHeight="319.0" prefWidth="288.0" title="Exercise Summary">
+        <xAxis>
+          <CategoryAxis fx:id="sportAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="durationAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <PieChart fx:id="nutrientPieChart" layoutX="333.0" layoutY="113.0" prefHeight="301.0" prefWidth="247.0" title="Nutrient Intake Ratio" />
+   </children>
+</AnchorPane>

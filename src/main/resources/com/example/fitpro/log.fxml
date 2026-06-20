@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitpro.controller.LogController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="224.0" prefHeight="51.0" prefWidth="374.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <Label fx:id="goalLabel" onMouseClicked="#navigateToGoal" text="Goal">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="eLoggingLabel" onMouseClicked="#navigateToLog" text="E-logging">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="nutritionLabel" onMouseClicked="#navigateToNutrition" text="Nutrition">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="progressLabel" onMouseClicked="#navigateToProgress" text="Progress">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label text="   " />
+            <Label fx:id="devicesLabel" onMouseClicked="#navigateToDevices" text="Devices">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="profileImageView" fitHeight="49.0" fitWidth="68.0" onMouseClicked="#navigateToProfile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="1.0" prefHeight="51.0" prefWidth="223.0" style="-fx-background-color: D9D9D9;">
+         <children>
+            <ImageView fx:id="logoImageView" fitHeight="44.0" fitWidth="53.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="     " />
+            <Label alignment="BOTTOM_LEFT" prefHeight="18.0" prefWidth="116.0" text="Fit Pro" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="9.0" layoutY="88.0" prefHeight="178.0" prefWidth="582.0" style="-fx-background-color: BEBDBD; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="237.0" layoutY="3.0" text="Record your exercise!">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="39.0" text="Date : ">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePicker" layoutX="66.0" layoutY="39.0" prefHeight="26.0" prefWidth="93.0" />
+            <Label layoutX="313.0" layoutY="41.0" text="Sports:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="76.0" text="Durations:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="212.0" layoutY="76.0" text="(Hours)">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="299.0" layoutY="76.0" text="Intensity:">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Slider fx:id="intensitySlider" layoutX="389.0" layoutY="82.0" prefHeight="14.0" prefWidth="172.0" />
+            <Label layoutX="380.0" layoutY="102.0" text="Low">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="532.0" layoutY="102.0" text="High">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="128.0" text="Calories Burned(Estimate) :">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="addReportButton" layoutX="467.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#addExerciseReport" text="Add A Report">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="calorieEstimateLabel" layoutX="226.0" layoutY="131.0" text="kacl">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sportField" layoutX="373.0" layoutY="39.0" />
+            <TextField fx:id="durationField" layoutX="90.0" layoutY="77.0" prefHeight="26.0" prefWidth="73.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="234.0" layoutY="58.0" text="Exercise Logging">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="266.0" text="Your Exercise Records:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="exerciseTable" layoutX="26.0" layoutY="296.0" prefHeight="98.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="sportColumn" prefWidth="75.0" text="Sports" />
+           <TableColumn fx:id="durationColumn" prefWidth="75.0" text="Duration" />
+           <TableColumn fx:id="intensityColumn" prefWidth="75.0" text="Intensity" />
+           <TableColumn fx:id="caloriesColumn" prefWidth="75.0" text="CaloriesBurned" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
